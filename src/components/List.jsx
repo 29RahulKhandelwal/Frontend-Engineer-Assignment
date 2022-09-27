@@ -1,45 +1,72 @@
-import React, { useState, useEffect, memo } from 'react';
-import PropTypes from 'prop-types';
-import SingleListItem from './SingleList';
+import React, { useState, useEffect, useCallback, memo } from "react";
+import PropTypes from "prop-types";
+import SingleListItem from "./SingleList";
 
-// List Component
-const WrappedListComponent = ({
-  items,
-}) => {
-  const [setSelectedIndex, selectedIndex] = useState();
-
-    console.log(items)
+const WrappedListComponent = ({ items }) => {
+  const [selectedIndex, setSelectedIndex] = useState(null);
 
   useEffect(() => {
     setSelectedIndex(null);
   }, [items]);
 
-  const handleClick = index => {
+  const handleClick = useCallback((index) => {
     setSelectedIndex(index);
-  };
+  }, []);
+
+  if (items === null || items.length === 0) {
+    return null;
+  }
+
+  console.log(items)
 
   return (
-    <ul style={{ textAlign: 'left' }}>
+    <ul>
       {items.map((item, index) => (
         <SingleListItem
-          onClickHandler={() => handleClick(index)}
+          key={item.id}
+          onClickHandler={handleClick}
           text={item.text}
           index={index}
-          isSelected={selectedIndex}
+          isSelected={selectedIndex === index}
         />
       ))}
     </ul>
-  )
+  );
 };
 
 WrappedListComponent.propTypes = {
-  items: PropTypes.array(PropTypes.shapeOf({
-    text: PropTypes.string.isRequired,
-  })),
+  items: PropTypes.arrayOf(
+    PropTypes.shape({
+      text: PropTypes.string.isRequired,
+      id: PropTypes.string.isRequired
+    })
+  ),
 };
 
 WrappedListComponent.defaultProps = {
-  items: null,
+  items:
+  [
+    {
+     text:"Here is text 1",
+     id:"1"
+    },
+    {
+     text:"Here is text 2",
+     id:"2"
+    },
+    {
+     text:"Here is text 3",
+     id:"3"
+    },
+    {
+     text:"Here is text 4",
+     id:"4"
+    },
+    {
+     text:"Here is text 5",
+     id:"5"
+    }
+   ]
 };
 
 const List = memo(WrappedListComponent);

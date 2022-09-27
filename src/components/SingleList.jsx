@@ -1,26 +1,20 @@
 import { memo } from "react";
 import PropTypes from "prop-types";
 
-//Single List Item
-const WrappedSingleListItem = ({
-  index,
-  isSelected,
-  onClickHandler,
-  text,
-}) => {
+const WrappedSingleListItem = ({ index, isSelected, onClickHandler, text }) => {
   return (
     <li
-      style={{ backgroundColor: isSelected ? 'green' : 'red' , cursor: 'pointer'}}
-      onClick={onClickHandler(index)}
-    >12
+      style={{ backgroundColor: isSelected ? "green" : "red", listStyle:"none", width:"150px", textAlign:"center", cursor:"pointer" }}
+      onClick={() => onClickHandler(index)}
+    >
       {text}
     </li>
   );
 };
 
 WrappedSingleListItem.propTypes = {
-  index: PropTypes.number,
-  isSelected: PropTypes.bool,
+  index: PropTypes.number.isRequired,
+  isSelected: PropTypes.bool.isRequired,
   onClickHandler: PropTypes.func.isRequired,
   text: PropTypes.string.isRequired,
 };
