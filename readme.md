@@ -25,9 +25,8 @@ Ans2.
 Ans3. 
 
 ![1](https://user-images.githubusercontent.com/80885005/192575497-5d2fb5a9-22ce-4be8-bf5a-fba3c06e2824.png)
-![2](https://user-images.githubusercontent.com/80885005/192575569-df3e9cec-e2ae-43d8-83a2-4d9d
+![2](https://user-images.githubusercontent.com/80885005/192575569-df3e9cec-e2ae-43d8-83a2-4d9d492d3957.png)
 ![3](https://user-images.githubusercontent.com/80885005/192575580-b3faa081-8bfb-42f0-aefd-0e02bbda0d9c.png)
-492d3957.png)
 ![4](https://user-images.githubusercontent.com/80885005/192575594-28ebc77b-d453-4116-ac52-466fde5994e9.png)
 
 
