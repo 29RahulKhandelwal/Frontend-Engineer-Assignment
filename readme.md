@@ -1,12 +1,12 @@
 # Frontend Engineer Assignment
 
-This repository contains all the code of this assignment.
-Task: Based on the code below answer the following queries:
-Ques1. Explain what the simple List component does.
-Ques2. What problems / warnings are there with code?
-Ques3. Please fix, optimize, and/or modify the component as much as you think is necessary.
+###This repository contains all the code of this assignment.
+##Task: Based on the code below answer the following queries:
+* Ques1. Explain what the simple List component does.
+* Ques2. What problems / warnings are there with code?
+* Ques3. Please fix, optimize, and/or modify the component as much as you think is necessary.
 
-Solutions:
+##Solutions:
 Ans1. The Simple List Component is the memoized list WrappedListComponent which is taking only one prop item that is available in the array of object where each object must have a text property containing the type of its value as a string, Also it contains a state as selectedState for storing the index of item that was selected.
 
 It contains 4 parameters: text, onClickhandler, index, isSelected
@@ -22,4 +22,13 @@ Ans2.
 * Every Item should contains a unique key.
 * The value we are getting for WrappedSingleListItem prop isSlected is type of boolean and on the other hand selectedIndex is type of number.
 
-Ans3. Passed array of items into WrappedListComponent.defaultProps with text and id
+Ans3. 
+
+![1](https://user-images.githubusercontent.com/80885005/192575497-5d2fb5a9-22ce-4be8-bf5a-fba3c06e2824.png)
+![2](https://user-images.githubusercontent.com/80885005/192575569-df3e9cec-e2ae-43d8-83a2-4d9d
+![3](https://user-images.githubusercontent.com/80885005/192575580-b3faa081-8bfb-42f0-aefd-0e02bbda0d9c.png)
+492d3957.png)
+![4](https://user-images.githubusercontent.com/80885005/192575594-28ebc77b-d453-4116-ac52-466fde5994e9.png)
+
+
+##Passed array of items into WrappedListComponent.defaultProps with text and id
